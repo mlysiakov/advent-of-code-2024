@@ -1,19 +1,21 @@
-package com.lysiakov.advent;
+package com.lysiakov.advent.y2024;
+
+import com.lysiakov.advent.util.Input;
+import com.lysiakov.advent.util.Puzzle;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Scanner;
 
-public class Day1 implements Advent {
+public class Day1 implements Puzzle {
 
-  record Input(List<Integer> left, List<Integer> right) {}
+  private record PuzzleInput(List<Integer> left, List<Integer> right) {}
 
   @Override
-  public Long solve(String inputFilePath) {
-    var input = read(inputFilePath);
+  public Long part1() {
+    var input = parse();
     var left = input.left();
     var right = input.right();
 
@@ -30,8 +32,8 @@ public class Day1 implements Advent {
   }
 
   @Override
-  public Long solve2(String inputFilePath) {
-    var input = read(inputFilePath);
+  public Long part2() {
+    var input = parse();
     var left = input.left();
     var right = input.right();
 
@@ -48,13 +50,12 @@ public class Day1 implements Advent {
     return answer;
   }
 
-  private Input read(String inputFilePath) {
-    List<Integer> left = new ArrayList<>();
-    List<Integer> right = new ArrayList<>();
+  private PuzzleInput parse() {
+    var left = new ArrayList<Integer>();
+    var right = new ArrayList<Integer>();
 
-    try (Scanner scanner = InputReader.read(inputFilePath)) {
+    try (var scanner = Input.read(2024, 1)) {
       boolean leftOrder = true;
-
       while (scanner.hasNextInt()) {
         int tmp = scanner.nextInt();
         if (leftOrder) {
@@ -65,12 +66,12 @@ public class Day1 implements Advent {
         leftOrder = !leftOrder;
       }
     }
-    return new Input(left, right);
+    return new PuzzleInput(left, right);
   }
 
   public static void main(String[] args) {
-    System.out.println(new Day1().solve("day1.txt"));
-    System.out.println(new Day1().solve2("day1.txt"));
+    System.out.println(new Day1().part1());
+    System.out.println(new Day1().part2());
   }
 
 }
