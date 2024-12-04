@@ -11,4 +11,10 @@ public class Input {
     var inStream = Input.class.getClassLoader().getResourceAsStream(inputFilePath);
     return new Scanner(inStream);
   }
+
+  public static String asString(int year, int day) {
+    try (var scanner = read(year, day)) {
+      return scanner.useDelimiter("\\A").next();
+    }
+  }
 }
