@@ -27,7 +27,9 @@ class Puzzle2024Test {
         Arguments.of(new Day2(), 2, 4),
         Arguments.of(new Day3(), 161, 48),
         Arguments.of(new Day4(), 18, 9),
-        Arguments.of(new Day5(), 143, 123)
+        Arguments.of(new Day5(), 143, 123),
+        Arguments.of(new Day6(), 41, 6),
+        Arguments.of(new Day7(), 3749, 11387)
     );
   }
 
