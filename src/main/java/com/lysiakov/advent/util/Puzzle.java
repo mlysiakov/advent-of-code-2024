@@ -2,9 +2,9 @@ package com.lysiakov.advent.util;
 
 public interface Puzzle {
 
-  Long part1();
+  long part1();
 
-  Long part2();
+  long part2();
 
   default void run() {
     System.out.println("Part 1: " + part1());

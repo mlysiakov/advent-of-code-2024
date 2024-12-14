@@ -18,7 +18,7 @@ public class Day3 implements Puzzle {
   }
 
   @Override
-  public Long part1() {
+  public long part1() {
     var string = Input.asString(2024, 3);
     return MUL_PATTERN
         .matcher(string)
@@ -32,7 +32,7 @@ public class Day3 implements Puzzle {
   }
 
   @Override
-  public Long part2() {
+  public long part2() {
     var string = Input.asString(2024, 3);
     List<Pair<Integer, String>> mulPairs =
         MUL_PATTERN

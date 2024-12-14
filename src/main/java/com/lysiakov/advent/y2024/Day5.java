@@ -13,7 +13,7 @@ public class Day5 implements Puzzle {
   }
 
   @Override
-  public Long part1() {
+  public long part1() {
     var input = parse();
     var graph = new Graph();
     for (var edge : input.edges()) {
@@ -30,7 +30,7 @@ public class Day5 implements Puzzle {
   }
 
   @Override
-  public Long part2() {
+  public long part2() {
     var input = parse();
     var graph = new Graph();
     for (var edge : input.edges()) {

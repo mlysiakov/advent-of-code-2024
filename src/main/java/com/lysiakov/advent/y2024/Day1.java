@@ -12,7 +12,7 @@ public class Day1 implements Puzzle {
   private record PuzzleInput(List<Integer> left, List<Integer> right) {}
 
   @Override
-  public Long part1() {
+  public long part1() {
     var input = parse();
     var left = input.left();
     var right = input.right();
@@ -30,7 +30,7 @@ public class Day1 implements Puzzle {
   }
 
   @Override
-  public Long part2() {
+  public long part2() {
     var input = parse();
     var left = input.left();
     var right = input.right();

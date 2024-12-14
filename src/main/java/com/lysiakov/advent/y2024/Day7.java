@@ -13,7 +13,7 @@ public class Day7 implements Puzzle {
   }
 
   @Override
-  public Long part1() {
+  public long part1() {
     var inputs = parseInput();
     long result = 0L;
     for (var input : inputs) {
@@ -36,7 +36,7 @@ public class Day7 implements Puzzle {
   }
 
   @Override
-  public Long part2() { // 472290821152397
+  public long part2() { // 472290821152397
     var inputs = parseInput();
     long result = 0L;
     for (var input : inputs) {

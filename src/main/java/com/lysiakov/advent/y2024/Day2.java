@@ -15,13 +15,13 @@ public class Day2 implements Puzzle {
   }
 
   @Override
-  public Long part1() {
+  public long part1() {
     var reports = parse();
     return reports.stream().filter(report -> validReport(report, 0)).count();
   }
 
   @Override
-  public Long part2() {
+  public long part2() {
     var reports = parse();
     return reports.stream().filter(report -> validReport(report, 1)).count();
   }

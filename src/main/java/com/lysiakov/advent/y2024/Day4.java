@@ -10,7 +10,7 @@ public class Day4 implements Puzzle {
   }
 
   @Override
-  public Long part1() {
+  public long part1() {
     var matrix = parse();
     long answer = 0L;
     for (int i = 0; i < matrix.length; i++) {
@@ -53,7 +53,7 @@ public class Day4 implements Puzzle {
   }
 
   @Override
-  public Long part2() {
+  public long part2() {
     var matrix = parse();
     long answer = 0L;
     for (int i = 0; i < matrix.length; i++) {
