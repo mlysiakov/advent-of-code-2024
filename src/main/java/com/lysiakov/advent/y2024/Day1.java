@@ -2,12 +2,10 @@ package com.lysiakov.advent.y2024;
 
 import com.lysiakov.advent.util.Input;
 import com.lysiakov.advent.util.Puzzle;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Scanner;
 
 public class Day1 implements Puzzle {
 
@@ -42,7 +40,7 @@ public class Day1 implements Puzzle {
       counter.merge(right.get(i), 1, Integer::sum);
     }
 
-    long  answer = 0;
+    long answer = 0;
     for (int i = 0; i < left.size(); i++) {
       int tmp = left.get(i);
       answer += (long) tmp * counter.getOrDefault(tmp, 0);
@@ -73,5 +71,4 @@ public class Day1 implements Puzzle {
     System.out.println(new Day1().part1());
     System.out.println(new Day1().part2());
   }
-
 }

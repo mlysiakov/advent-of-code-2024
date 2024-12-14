@@ -2,7 +2,6 @@ package com.lysiakov.advent.y2024;
 
 import com.lysiakov.advent.util.Input;
 import com.lysiakov.advent.util.Puzzle;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -32,7 +31,8 @@ public class Day7 implements Puzzle {
     if (index >= nums.length) {
       return false;
     }
-    return dfs(index + 1, nums, current + nums[index], target) || dfs(index + 1, nums, current * nums[index], target);
+    return dfs(index + 1, nums, current + nums[index], target)
+        || dfs(index + 1, nums, current * nums[index], target);
   }
 
   @Override
@@ -60,12 +60,12 @@ public class Day7 implements Puzzle {
     }
     if (!res) {
       var merge = Long.toString(current) + nums[index];
-      res =  dfs2(index + 1, nums, Long.parseLong(merge), target);
+      res = dfs2(index + 1, nums, Long.parseLong(merge), target);
     }
     return res;
   }
 
-  private record PuzzleInput(long sum, long[] nums) { }
+  private record PuzzleInput(long sum, long[] nums) {}
 
   private List<PuzzleInput> parseInput() {
     var puzzleInputs = new ArrayList<PuzzleInput>();

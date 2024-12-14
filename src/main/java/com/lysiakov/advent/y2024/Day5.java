@@ -4,7 +4,6 @@ import com.lysiakov.advent.util.Graph;
 import com.lysiakov.advent.util.Input;
 import com.lysiakov.advent.util.Pair;
 import com.lysiakov.advent.util.Puzzle;
-
 import java.util.*;
 
 public class Day5 implements Puzzle {
@@ -95,8 +94,7 @@ public class Day5 implements Puzzle {
     return sorted;
   }
 
-  private record PuzzleInput(List<Pair<Integer, Integer>> edges, List<List<Integer>> pages) {
-  }
+  private record PuzzleInput(List<Pair<Integer, Integer>> edges, List<List<Integer>> pages) {}
 
   private PuzzleInput parse() {
     List<Pair<Integer, Integer>> edges = new ArrayList<>();

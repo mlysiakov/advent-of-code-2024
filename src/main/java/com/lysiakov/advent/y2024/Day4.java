@@ -52,7 +52,6 @@ public class Day4 implements Puzzle {
     return counter;
   }
 
-
   @Override
   public Long part2() {
     var matrix = parse();
@@ -94,11 +93,7 @@ public class Day4 implements Puzzle {
     return matrix[x][y];
   }
 
-
-
   private char[][] parse() {
-    return Input.asString(2024, 4).lines()
-        .map(String::toCharArray)
-        .toArray(char[][]::new);
+    return Input.asString(2024, 4).lines().map(String::toCharArray).toArray(char[][]::new);
   }
 }

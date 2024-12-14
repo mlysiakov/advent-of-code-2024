@@ -2,7 +2,6 @@ package com.lysiakov.advent.y2024;
 
 import com.lysiakov.advent.util.Input;
 import com.lysiakov.advent.util.Puzzle;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -47,9 +46,8 @@ public class Day2 implements Puzzle {
     try (var scanner = Input.read(2024, 2)) {
       while (scanner.hasNextLine()) {
         var line = scanner.nextLine();
-        var numbers = Arrays.stream(line.split("\\s+"))
-            .map(Integer::parseInt)
-            .collect(Collectors.toList());
+        var numbers =
+            Arrays.stream(line.split("\\s+")).map(Integer::parseInt).collect(Collectors.toList());
         result.add(numbers);
       }
     }
@@ -57,7 +55,8 @@ public class Day2 implements Puzzle {
   }
 
   private enum Order {
-    INCREASE, DECREASE
+    INCREASE,
+    DECREASE
   }
 
   private class ReportValidator {
@@ -120,8 +119,5 @@ public class Day2 implements Puzzle {
       failureTolerationLevel--;
       return true;
     }
-
   }
-
-
 }
